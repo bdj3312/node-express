@@ -1,0 +1,592 @@
+.all_box {
+    transition: transform 0.3s ease;
+    height : 100%;
+    
+    
+}
+
+
+.title_bar {
+    padding-bottom: 10px;
+    
+    padding-top: 40px;
+    margin-bottom: 30px;
+    
+}
+.title_bar .step, .num, .tit {
+    position: relative;
+    left: 200px; /* 위로 이동할 픽셀 수 */
+    font-size: 30px;   
+}
+
+.body_box {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    
+}
+
+
+.friend_box {
+    border: 1px solid #ccc; 
+    width:30%;
+    height:600px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    
+    
+    
+}
+.friend_box .inputset.search {
+    margin-top: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center; 
+    
+}
+.friend_box1{
+    border: 1px solid #ccc; 
+    width:10%;
+    height:600px;
+    margin-top: 10px;
+    border-radius: 10px; 
+    position: relative; 
+    border-radius: 10px 0 0 10px;
+}
+.friend_box2 {
+    border: 1px solid #ccc; 
+    width:30%;
+    height:600px;
+    margin-top: 10px;
+    border-radius: 10px; 
+    
+    border-radius: 0 10px 10px 0;
+ 
+}
+.friend_box2 .inputset.search {
+    margin-top: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center; 
+    
+}
+.btn.add {
+    display: block;
+    background: #009fe2;
+    padding: 15px 26px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR Bold';
+    color: #fff;
+    margin: 0 36px;
+    cursor: pointer; 
+    font-weight: bold;
+}
+.btn.add:hover {
+    background: rgb(0, 130, 185); /* Hover 시 배경 색상을 약간 어둡게 변경 */
+    
+}
+.btn.add::after {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 6px;
+    background: url(/images/add_arr.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin: 0 0 2px 15px;
+}
+
+.friend_txt1 {
+    position: absolute; 
+    top: -30px; 
+    
+}
+.friend_txt2 {
+    position: absolute; 
+    top: -30px; 
+    left: -190px;
+}
+
+
+
+
+
+
+/* 명단등록버튼 */
+
+.call_btnset {
+    overflow: inherit;
+    margin-top: 17px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.call_btnset .left_btn {
+    position: relative;
+}
+.call_btnset .btn {
+    padding: 11px 20px;
+    font-size: 14px;
+    
+}
+.blue_btn {
+    background: #009fe2;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 28px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.left_btn_selectmenu {
+    background: #fff;
+    border: 1px solid #009fe2;
+    border-radius: 5px;
+    position: absolute;
+    top: 48px;
+    z-index: 5;
+    width: 139px;
+    left: -10px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+ul, ol, li {
+    list-style: none;
+    
+}
+.left_btn_selectmenu li {
+    padding: 0 4px;
+}
+.left_btn_selectmenu li a {
+    display: block;
+    text-align: center;
+    padding: 14px 13px;
+    font-size: 14px;
+    color: #212121;
+    margin-left: -10px;
+    margin-right: -10px;
+    transition: background-color 0.3s; /* 호버 효과를 부드럽게 만들기 위한 트랜지션 */
+}
+.left_btn_selectmenu li + li a {
+    border-top: 1px solid rgba(0, 159, 226, .3);
+}
+.left_btn_selectmenu li a:hover {
+    background-color: #94e4f8; /* 호버시 변경될 배경색 */
+    border-radius: 5px; /* 테두리를 둥글게 만듭니다 */
+    
+}
+    
+    
+.call_btnset .right_btn  {  
+    position: relative;
+    
+}
+.gray_btn {
+    background: #a6a8a8;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 35px;
+}
+
+
+
+
+
+.inputset.search input[type="text"] {
+    margin-left: 15px;
+    margin-top: 10px; 
+    height: 30px;
+    border-radius: 5px; 
+    border: 1px solid #e7e5e5; 
+    background-color: #eeebeb;
+    outline: none;
+    
+}
+
+.inputset.search input[type="text"] + .돋보기_btn {
+    margin-top: 10px; 
+    margin-left: -30px;
+}
+
+.돋보기_btn {
+    display: block;
+    width: 20px; 
+    height: 20px; 
+    background-image: url('/images/돋보기.png'); 
+    background-size: cover; 
+    background-position: center; 
+    cursor: pointer; 
+    
+}
+.친구박스몸통 {
+    height: 80%;
+    position: relative;
+}
+.friend_list {
+    height: 480px;
+    
+}
+.friend_list table {
+    height: 100%;
+    width : 100%;
+    border-collapse: collapse;
+    position: relative;
+
+}
+.friend_list thead {
+    position: relative;
+    background-color: #f1eeee; 
+    top : 10px;  
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    
+}
+
+.friend_list th {
+    font-size: 15px; 
+      
+}
+.friend_list tr {
+    height: 50px;
+    
+    
+
+}
+.friend_list tbody {
+    position: absolute;
+    width: 100%;
+    height: 430px;
+    overflow-y: scroll;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    top: 60px
+    
+   
+    
+}
+#전체친구목_table label[type="text"] {
+    position: relative;
+    
+    left: 60px; /* 원하는 위치에 따라 조정 */
+    margin-right: 90px;
+}
+#전체친구목_table tbody tr {
+    position: relative;
+    left:30px;
+    
+    
+}
+#전체친구목_table tbody td {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 20px;
+    position: relative;
+    
+   
+
+}
+
+.inputset.chk input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer;
+   
+    
+}
+.friend_box1 ul {
+    list-style-type: none; 
+    
+}
+.friend_box1 a {
+    position: absolute; 
+    background-color: #dde9fa; 
+    color: #009fe2; 
+    font-weight: bold; 
+    border-left: 3px solid #009fe2; 
+    padding: 10px 80px; 
+    text-decoration: none; 
+    cursor: pointer;   
+    box-sizing: border-box; 
+    transition: background-color 0.3s, color 0.3s; /* 부드러운 전환 효과 */
+    border-radius: 5px; 
+    left: 10px;
+    margin-top: 10px;
+    text-indent: -60px; 
+   
+}
+.friend_box1 a::after {
+    content: ''; /* 가상 요소의 내용을 빈 문자열로 설정 */
+    position: absolute; /* 절대 위치 설정 */
+    top: 40%; /* 상단 정렬을 위해 세로 중앙 정렬 */
+    right: 10px; /* 오른쪽 여백 설정 */
+    transform: translateY(-50%); /* 상대적인 세로 정렬을 위해 위치 조정 */
+    border: solid #009fe2; 
+    border-width: 2px 2px 0 0; 
+    display: inline-block; 
+    padding: 3px; 
+    width: 4px; 
+    height: 4px; 
+    transform: rotate(45deg); /* 회전 설정 */
+    transition: border-color 0.3s; 
+}
+
+.friend_box1 a:hover::after {
+    border-color: #ffffff; 
+}
+
+.friend_box1 a:hover {
+    background-color: #009fe2; 
+    color: #ffffff; 
+}
+
+.group_btnset {
+    display: flex; 
+    margin-top: 20px; 
+}
+.group_btnset .btn.group1 button {
+    padding: 5px 10px; 
+    background-color: #ffffff; 
+    color: #009fe2; 
+    border: 1px solid #009fe2; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    line-height: 18px;
+    margin-left: 30px;
+    margin-right: 10px;
+    
+}
+.group_btnset .btn.group2 button {
+    padding: 5px 10px; 
+    background-color: #ffffff; 
+    color: #009fe2; 
+    border: 1px solid #009fe2; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    line-height: 18px;
+    
+}
+
+.group_btnset .btn.del button {
+    padding: 5px 10px; 
+    color: #fff; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 15px; 
+    margin-left: 183px;
+    background: #a6a8a8;
+    display: inline-block;
+    border: none;
+      
+}
+.question_b2 {
+    position: relative;
+    display: inline-flex;
+    border-radius: 15px;
+    background: #999;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    vertical-align: bottom;
+    margin-left: -1px;
+    margin-bottom: 1px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.line.bubble {
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    height: auto;
+    letter-spacing: -0.25px;
+    margin-top: 12.8px;
+    padding: 15px;
+    position: absolute;
+    top: 56%;
+    right: -10.5vw;
+    z-index: 100;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 30%);
+    line-height: 23px;
+    text-align: center;
+    display: none;
+    width: 30vw;
+}
+.line.bubble img {
+    display: block;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+img {
+    vertical-align: middle;
+}
+.red {
+    color: #f23545;
+}
+.question_b2.callex::after {
+    content: '?';
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    font-size: 12px;
+    padding: 0 1px 0 0;
+    
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+.callex:hover .line.bubble {
+    display: block;
+}
+
+.infoset {
+    margin: 20px 0px 10px 0;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.infoset.step01 .info_grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 53px;
+    overflow: visible;
+    margin-right: 5px;
+    gap: 5px;
+}
+.infoset.step01 .info_grid .question {
+    text-indent: -26px;
+    margin-left: 220px;
+    font-size: 14px;
+}
+.question::before, .infoset .question::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url(/images/question.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin: 0 5px 2px 0;
+}
+
+
+.infoset .info_grid:nth-child(2) {
+    display: flex;
+    margin-right: 180px;
+    
+}
+.infoset .save_btn {
+    padding: 14px;
+    display: block;
+    background: #b5b5b5;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.infoset .save_btn::after {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url(/images/checked.png) no-repeat 0 0;
+    margin: 0 0 3px 35px;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.alert {
+    font-size: 14px;
+    color: #f23545;
+    font-family: 'Noto Sans KR Medium';
+    position: relative;
+    display: inline-block;
+}
+.infoset.step01 .alert .save_alert {
+    display: none;
+    position: absolute;
+    width: 130px;
+    right: 135px;
+    top: -10px;
+}
+.infoset.step01 .info_grid .alert .save_alert span {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    animation: bounce 0.3s ease infinite alternate;
+}
+
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(2) {animation-delay: 0.1s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(3) {animation-delay: 0.2s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(4) {animation-delay: 0.3s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(5) {animation-delay: 0.4s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(6) {animation-delay: 0.5s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(7) {animation-delay: 0.6s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(8) {animation-delay: 0.7s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(9) {animation-delay: 0.8s;}
+.infoset.step01 .info_grid .alert .save_alert span:nth-child(10) {animation-delay: 0.9s;}
+
+.infoset .btn.link {
+    padding: 15px;
+    display: block;
+    background: #f23545;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;   
+    cursor: pointer;
+}
+.infoset .btn.blink2 {
+    animation: btnblink2 1s steps(1) infinite;
+}
+.infoset .btn.link::after {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 11px;
+    background: url(/images/link_arr_wh.png) no-repeat 0 0;
+    margin: 0 0 3px 35px;
+    vertical-align: middle;
+}
+@keyframes btnblink2 {
+    0% {box-shadow: none;}
+    50% {box-shadow: 0px 0px 5px 2px rgba(242, 52, 69, .5);}
+    100% {box-shadow: none;}
+}
+
+#메시지_btn {
+    z-index: 1;
+}
+
+#메시지대상_table label[type="text"] {
+    position: relative;
+    left: 40px; /* 원하는 위치에 따라 조정 */
+    margin-right: 75px;
+}
+#메시지대상_table tbody tr {
+    position: relative;
+    left: 2px;
+    
+    
+}
+#메시지대상_table tbody td {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 20px;
+    position: relative;
+    
+
+}
+input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+

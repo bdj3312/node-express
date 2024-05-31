@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charSet="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/결제페이지.css">
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://js.tosspayments.com/v1/payment-widget"></script>
+    
+    
+    
+    
+    <title>모아톡 정기 결제</title>
+</head>
+
+<body>
+    <div class="container">
+            <div class="title-img"></div>
+            <div class="title1">상품 정보</div>
+            <p class="txt-1">모아톡 정기 결제</p>
+            <p>결제 금액: 20,000원</p>
+            <!-- 결제 방법 영역-->
+            <div class="title2"></div>
+            <div id="payment-method"></div>
+            <div id="agreement"></div> 
+            <button id="payment-button" onclick="window.location.href='/htmls/결제창.html'" >결제하기</button>
+        
+        
+    </div>
+</body>
+
+
+</html>

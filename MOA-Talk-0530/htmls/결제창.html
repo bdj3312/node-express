@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://js.tosspayments.com/v1/payment-widget"></script>
+    <link rel="stylesheet" href="/css/결제창.css">
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+    
+  </head>
+  <body>
+    <section>
+    <!-- 결제 UI, 이용약관 UI 영역 -->
+      <div id="payment-method"></div>
+      
+      <div id="agreement"></div>
+      <!-- 결제하기 버튼 -->
+      
+      <button id="payment-button">결제하기</button>
+    </section>
+    
+    <script>
+      
+      const coupon = document.getElementById("coupon-box");
+      const button = document.getElementById("payment-button");
+      const amount = 20000;
+      const Nickname = sessionStorage.getItem('Nickname');
+      const Email = sessionStorage.getItem('Email');
+      const PhoneNumber = sessionStorage.getItem('PhoneNumber');
+      
+      
+      
+      // 구매자의 고유 아이디를 불러와서 customerKey로 설정하세요.
+      // 이메일・전화번호와 같이 유추가 가능한 값은 안전하지 않습니다.
+      const widgetClientKey = "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm";
+      const customerKey = "ANONYMOUS";
+      const paymentWidget = PaymentWidget(widgetClientKey, customerKey); // 회원 결제
+      // const paymentWidget = PaymentWidget(widgetClientKey, PaymentWidget.ANONYMOUS) // 비회원 결제
+
+      const paymentMethodWidget = paymentWidget.renderPaymentMethods(
+        "#payment-method",
+        { value: amount },
+        { variantKey: "DEFAULT" }
+      );
+
+      paymentWidget.renderAgreement(
+        "#agreement", 
+        { variantKey: "AGREEMENT" }
+      );
+
+      
+
+      button.addEventListener("click", function () {
+        // 결제를 요청하기 전에 orderId, amount를 서버에 저장하세요. 
+        // 결제 과정에서 악의적으로 결제 금액이 바뀌는 것을 확인하는 용도입니다.  
+        const orderId = uuid.v4();
+        paymentWidget.requestPayment({
+            orderId: orderId,
+            orderName: "모아톡 정기 결제",
+            successUrl: window.location.origin + "/htmls/결제성공.html",
+            failUrl: window.location.origin + "/htmls/결제실패.html",
+            customerEmail: Email,
+            customerName: Nickname,
+            customerMobilePhone: PhoneNumber,
+      }).catch((error) => {
+          if (error.code === 'DUPLICATED_ORDER_ID') {
+              alert("이미 결제된 구매정보입니다.")
+          } else {
+              console.error("결제 요청 중 오류 발생", error);
+              alert("결제가 취소 되었습니다.")
+          }
+      })
+});
+    </script>
+  </body>
+</html>

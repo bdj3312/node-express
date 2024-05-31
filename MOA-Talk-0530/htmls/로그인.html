@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모아톡 로그인</title>
+    <link rel="stylesheet" href="/css/로그인.css">
+</head>
+<body>
+    
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+  integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01" crossorigin="anonymous"></script>
+
+<div class="container">
+    <div class="s_frm login kakao">
+        <div class="inner">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <div class="marquee-item">
+                        <img src="/images/main01.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main02.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main03.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main04.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main01.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main02.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main03.png" alt="">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="/images/main04.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="login_img"></div>
+                <h3>모아톡과 함께해요!</h3>
+                
+                <!-- <a id="kakaotalk-sharing-btn" href="javascript:;">
+                    <img src="https://developers.kakao.com/assets//images/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유 보내기 버튼">
+                </a> -->
+                <a id="kakao-login-btn" href="javascript:kakaoLogin();">
+                <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="300" 
+                    alt="카카오 로그인 버튼" />
+                </a>
+                <div class="text_all">
+                    <a href="/htmls/메인페이지.html" class="text_1">모아톡 홈페이지</a>
+                    <hr>
+                    <a class="text_2">고객센터</a>
+                </div>
+                <div class="text_3">
+                    <p>누구나! 무료체험 이벤트 신청가능<br>
+                       사용내역 없다면 30일 내, 전액 환불 가능   
+                    </p>
+                </div>
+                
+                <!-- <button class="api-btn" onclick="requestUserInfo()" >사용자 정보 가져오기</button> -->
+                <!-- <button class="logout-btn" onclick="logout_btn()" >로그아웃</button>
+                <button class="picker" onclick="picker()" >친구목록선택창</button>
+                <button class="sendtofriends" onclick="sendToFriends()" >친구에게 메시지 보내기</button>
+                <button class="카톡실행" onclick="카톡실행()" >카톡실행</button> -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://developers.kakao.com/sdk/js/kakao.js"></script>
+    
+
+
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src = "/scripts/로그인정보기록.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

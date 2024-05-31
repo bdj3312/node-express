@@ -1,0 +1,763 @@
+
+
+
+header .channel-info {position:absolute; top:10px; left:180px; z-index: 100; transition: transform 0.3s ease;}
+header .channel-info::after {content:""; display:block; clear:both }
+header .channel-info .btn {display:inline-block; vertical-align: middle; font-size:21px; color:#1d1804; font-weight:bold; float:left; margin-top:10px; }
+header .channel-info .btn .ch {/*background:#1d1804;*/ background: #ffdc49; border-radius:5px; /*color:#fff; font-weight:normal;*/ font-size:15px; padding:5px 15px}
+
+header .channel-info .btn .ch::before {content:""; display:inline-block; width:34px; height:24px; background:url('/images/channer-ico.png') no-repeat 0 0;
+    vertical-align: middle; margin: 4px 2px 5px; background-size: 80%;
+}
+
+header .channel-info .channel-tip {display:inline-block; vertical-align: middle; background:#fff; box-shadow: 2px 2px 5px rgba(0,0,0,.2); margin:0 0 0 30px; border-radius: 5px; position:relative; display: none; backface-visibility: hidden}
+header .channel-info:hover .channel-tip {
+    display:inline-block; animation: tipmove 1s linear infinite alternate
+}
+
+@keyframes tipmove  {
+    0% {margin-left:30px}
+    50% { }
+    100% {margin-left:20px }
+}
+
+header .channel-info .channel-tip::before {
+    content:"";
+    display:block;
+    width:15px;
+    height: 15px;
+    background: #ffdc49;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    position:absolute;
+    top:15px; left:-7px;
+    transform:rotate(45deg);
+    z-index: 0;
+}
+
+/*channel-tip 수정 220324 dahee*/
+header .channel-info .channel-tip .cht_inner{position: relative; padding:20px;z-index: 10;background: #ffdc49;}
+header .channel-info .channel-tip .cht_inner .grid  .cht_h .hd{font-size: 24px;color: #1b1b1b;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont{display: flex; margin-top: 20px;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box{padding:20px 10px; border: 3px solid #1b1b1b; background: #f0f0f0; border-radius: 20px; text-align: center;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box + .box{margin-left: 15px;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box .boxhd{font-size: 22px;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box .boxhd::after{content: ""; display: inline-block; width: 25px; height: 25px;
+    vertical-align: middle; margin: 0 0 3px 5px;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box.ty1 .boxhd::after{background: url(/images/ch_pop_hd01.png)no-repeat 0 0;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box.ty2 .boxhd::after{background: url(/images/ch_pop_hd02.png)no-repeat 0 0;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box.ty3 .boxhd::after{background: url(/images/ch_pop_hd03.png)no-repeat 0 0;}
+header .channel-info .channel-tip .cht_inner .grid .cht_cont .box .stxt{padding: 13px 0; font-size: 14px;}
+header .channel-info .channel-tip .cht_inner .grid .search{margin: 30px auto 0; text-align: center;}
+header .channel-info .channel-tip .cht_inner .grid .search .stxt{display: inline-block; padding: 5px 15px 0; text-align: center; border: 3px solid #1b1b1b; background: #fff;}
+header .channel-info .channel-tip .cht_inner .grid .search .stxt::before{content: ""; display: inline-block; width: 21px; height: 22px;
+    background:url(/images/ch_pop_search_logo.png)no-repeat 0 0; vertical-align: middle; margin: 0 7px 4px;}
+header .channel-info .channel-tip .cht_inner .grid .search .stxt::after{content: ""; display: inline-block; width: 17px; height: 18px;
+    background: url(/images/ch_pop_search.png) no-repeat 0 0; vertical-align: middle; margin: 0 -4px 4px 29px}
+  
+.navbar {
+    background-color: #ffffff; /* 배경색 */
+    transition: transform 0.3s ease;
+    flex: 1; /* 남은 공간을 차지하도록 설정합니다. */
+    position: absolute;
+    top: 0;
+    left: calc(60% - 300px);
+    
+}
+ 
+  
+.navbar a {
+    float: left; /* 왼쪽으로 정렬 */
+    display: block; /* 블록 요소로 변경 */
+    color: rgb(5, 5, 5); /* 글자색 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 14px 20px; /* 패딩 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-weight: bold;
+}
+  
+.navbar a:hover { 
+    color: rgb(14, 75, 241); /* 호버 시 글자색 */
+}
+
+input[id="menuicon"]:checked ~ header .channel-info { 
+    transform: translateX(220px); /* 사이드바가 열릴 때 네브바를 오른쪽으로 이동 */
+}
+input[id="menuicon"]:checked ~ .navbar {
+    transform: translateX(220px); /* 사이드바가 열릴 때 네브바를 오른쪽으로 이동 */
+}
+input[id="menuicon"]:checked ~ .all_box {
+    transform: translateX(220px); /* 사이드바가 열릴 때 네브바를 오른쪽으로 이동 */
+}
+input[id="menuicon"]:checked ~ .main_box {
+    transform: translateX(220px); /* 사이드바가 열릴 때 네브바를 오른쪽으로 이동 */
+}
+input[id="menuicon"]:checked ~ .m_info_all {
+    transform: translateX(220px); /* 사이드바가 열릴 때 네브바를 오른쪽으로 이동 */
+}
+
+input[id="menuicon"] {display:none;}
+input[id="menuicon"] + label {display:block;margin:30px;width:50px;height:40px;position:relative;cursor:pointer;}
+input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:5px;border-radius:30px;background:#000;transition:all .35s;}
+input[id="menuicon"] + label span:nth-child(1) {top:0;}
+input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);} 
+input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+input[id="menuicon"]:checked + label {z-index:2;}
+input[id="menuicon"]:checked + label span {background:#012715;}
+input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+div[class="sidebar"] {width:200px;height:100%;background:#f3e6e6;position:fixed;top:0;left:-300px;z-index:1;transition:all .35s; 
+    background: linear-gradient(135deg, #fcfafa 0%, #faf0f0 20%, #f8f6dd 50%, #fcf2f2 80%, #faf5f5 100%);}
+input[id="menuicon"]:checked + label + div {left:0;}
+
+
+.sidebar {
+    flex: 1; /* 남은 공간을 차지하도록 설정합니다. */
+}
+.sidebar ul {
+    list-style: none; /* 기본 목록 스타일을 제거합니다. */
+    padding: 0; /* 목록의 패딩을 없앱니다. */
+    margin: 0; /* 목록의 마진을 없앱니다. */
+    text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    display: flex; /* Flexbox 레이아웃을 사용합니다. */
+    flex-direction: column; /* 수직으로 항목들을 배치합니다. */
+    justify-content: center; /* 수직 방향으로 가운데 정렬합니다. */
+    height: 100%; /* 부모 요소의 높이를 100%로 설정합니다. */
+    
+}
+.side_img {
+    position: relative; /* 부모 요소 기준으로 상대적인 위치 지정 */
+    left: 0px; 
+    background-image: url('/images/moatalk.png');
+    background-size: cover; /* 이미지가 요소에 맞게 조절되도록 설정 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+    width: 100%; /* 이미지 너비 설정 */
+    height: 130px; /* 이미지 높이 설정 */
+    top: -150px;
+    
+}
+.sidebar a {
+    color: #050505;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Sunflower", sans-serif;
+    font-style: normal;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    line-height: 1.5; /* 기본 라인 높이 설정 */
+    top: -70px;  
+    text-shadow: 2px 2px 4px rgba(9, 53, 250, 0.5); 
+}
+.sidebar a:hover {
+    color: #070707; 
+    font-size: 30px;
+    line-height: 1.5; /* 호버 시 라인 높이 유지 */
+}
+
+
+.sidebar hr {
+    margin: 3px auto; /* 수평선의 상단과 하단 여백 조절 */
+    border: none;
+    border-top: 3px solid #f8f5f5; /* 수평선 스타일 지정 */
+    width: 80%;
+    opacity: 0.7; /* 불투명도 조절로 부드러운 효과 */
+    box-shadow: 0 5px 12px rgba(74, 75, 75, 0.959); /* 그림자 효과 추가 */
+    position: relative;
+    top: -70px; 
+}
+
+.sidebar ul li {
+    padding: 20px 0; /* 각 항목의 상하 패딩을 조정합니다. */
+}
+.pw_txt.stxt {
+    font-size: 14px; /* 원하는 크기로 조정 */
+    user-select: none; /* 텍스트 선택 방지 */
+    -moz-user-select: none; /* Firefox 호환 */
+    -webkit-user-select: none; /* Chrome 및 Safari 호환 */
+    -ms-user-select: none; /* IE 호환 */
+    pointer-events: none; /* 마우스 이벤트 방지 */
+    color:#19191a
+    
+}
+.m_info_all {
+    width: 100%;
+    transition: transform 0.3s ease; 
+}
+.info_box {
+    
+    background-color: #ffffff; /* 배경색 */
+    width: 90%;
+    position: relative;
+    margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+    border-top: 2px solid #CCCCCC; /* 위쪽 테두리 추가 */
+    border-bottom: 2px solid #CCCCCC; /* 아래쪽 테두리 추가 */    
+}
+.mid-box {
+    display:flex;
+    flex-direction: row;
+}
+.pay_check {
+    background-color: #ffffff; /* 배경색 */
+    
+    width: 90%;
+    height: 500px;
+    position: relative;
+    margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+    border-top: 2px solid #CCCCCC; /* 위쪽 테두리 추가 */
+    border-bottom: 2px solid #CCCCCC; /* 아래쪽 테두리 추가 */  
+}
+.pay_check .pay_check_box {
+    border: 1px solid #CCCCCC; /* 테두리 추가 */
+    padding: 10px; /* 안쪽 여백 추가 */
+    margin-top: 40px;
+    width: 300px; /* 테이블을 부모 요소의 너비에 맞게 설정 */
+    height: 300px;
+    
+    
+}
+.pay_check .pay_check_box .pay_txt{
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 2px solid #CCCCCC; /* 테두리 추가 */
+    padding-bottom: 10px;
+}
+.pay_info p {
+    margin-bottom: 30px;
+}
+.pay_m {
+    border: 1px solid #CCCCCC; /* 테두리 추가 */
+    width: 300px; /* 테이블을 부모 요소의 너비에 맞게 설정 */
+    height: 100px;
+}
+.pay_m li {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.m_info_all .hd3 {
+    border-bottom: 2px solid #d9d9d9;
+    padding: 0 0 5px 0;
+    width: 90%;
+    position: relative;
+    margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+    
+    
+}
+.info_box table {
+    width: 70%; /* 테이블을 부모 요소의 너비에 맞게 설정 */
+    height: 600px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-top: 2px solid #CCCCCC; /* 위쪽 테두리 추가 */
+    border-bottom: 2px solid #CCCCCC; /* 아래쪽 테두리 추가 */ 
+    
+     
+}
+
+.info_box table th {
+    background-color: #ececea;
+    width: 200px;
+    height: 50px;
+    font-size: 14px;
+}
+.info_box table input {
+    height: 30px;
+    border: 1px solid #080808;
+    margin-left: 10px;
+}
+.upload_button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #0a77f5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload_button:hover {
+    background-color: #3d14f3;
+}
+.bottomset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11px;
+    height: 50px;
+    width: 90%;
+    
+}
+.bottom_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.bottomset .bottom_right .bottom_save{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* 수평 중앙 정렬 */
+    height: 50px;
+    background: #009fe2;
+    color: #fff;
+    padding: 0 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+    
+}
+.bottom_save::before {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url(/images/checked.png) no-repeat 0 0;
+    margin: 0 17px 0 0;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.bottom_rmv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* 수평 중앙 정렬 */
+    height: 50px;
+    background: #b8b9b9;
+    color: #fff;
+    padding: 0 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.bottom_rmv::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/images/m_leave.png) no-repeat 0 0;
+    background-size: cover;
+    margin: 0 17px 0 0;
+    vertical-align: middle;
+}
+
+/* 탭 버튼 스타일 */
+.tablink {
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.tablink:focus,
+.tablink:active {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.tabs {
+    position: relative;
+    left: 95px;
+}
+/* 탭 버튼 호버 스타일 */
+.tablink:hover {
+    background-color: #ddd;
+}
+
+/* 탭 내용 스타일 */
+.tabcontent {
+    display: none;
+}
+
+/* 탭 내용 활성화 스타일 */
+.tabcontent.active {
+    display: block;
+}
+
+
+.m_info_all .info_title {
+    margin-bottom: 50px;
+    width: 100%;
+}   
+.m_info_all .info_title .my_info {
+    font-size: 25px;
+    
+}
+/* 메시지발송 누르면 나오는 팝업 css */
+.lypop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    height: 100%;
+    margin: auto;
+    z-index: 9999;
+    background: rgba(0, 0, 0, .7);
+}
+#udagree_lypop.lypop .lypop_cont {
+    width: 500px;
+    height: 589px;
+}
+.lypop .lypop_cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #666;
+    font-size: 14px;
+    margin: auto;
+}
+.lypop .lypop_cont .top_close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background: url(/images/btn_close.png) no-repeat 0 0;
+    width: 37px;
+    height: 37px;
+    z-index: 100;
+}
+
+.lypop .cont_inner {
+    overflow: hidden;
+}
+.lypop .grid {
+    /* padding: 40px 20px 0 0; */
+    overflow: hidden;
+}
+#udagree_lypop .lypop_cont .cont_inner .info_grid.udagree_cont {
+    text-align: center;
+    padding-top: 76px;
+}
+#udagree_lypop .lypop_cont .cont_inner .info_grid.udagree_cont .hd {
+    font-size: 24px;
+}
+.lypop_cont .cont_inner .info_grid .hd {
+    font-size: 24px;
+}
+#udagree_lypop .lypop_cont .cont_inner .info_grid.udagree_cont > img {
+    margin-top: 45px;
+}
+.lypop .cont_inner img {
+    display: block;
+    margin: 0 auto;
+}
+#udagree_lypop .lypop_cont .cont_inner .info_grid.udagree_cont > p {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 193px;
+    font-size: 16px;
+}
+.lypop_cont .cont_inner .info_grid p.stxt {
+    font-size: 16px;
+}
+.stxt {
+    display: inline;
+    padding-left: 12px;
+    font-size: 13px;
+}
+#udagree_lypop .lypop_cont .cont_inner .info_grid.udagree_cont > .btn.rec {
+    margin-top: 68px;
+    color: #fff;
+    background: #cf423c;
+    border-radius: 5px;
+    padding: 12px 35px;
+    font-size: 22px;
+    letter-spacing: .01em;
+}
+.btn.rec {
+    color: #fff;
+    background: #cf423c;
+    border-radius: 5px;
+    padding: 12px 35px;
+    font-size: 22px;
+    letter-spacing: .01em;
+    display: inline-block;
+    text-align: center;
+}
+#udagree_lypop .lypop_cont .cbtnset {
+    margin-top: 45px;
+}
+.lypop .cbtnset {
+    text-align: center;
+    border-top: 1px solid #d9d9d9;
+    padding: 16px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#udagree_lypop .lypop_cont .cbtnset .c_btn {
+    color: #666;
+}
+.lypop .cbtnset .c_btn {
+    display: block;
+    color: #009fe2;
+}
+.lypop .cbtnset a {
+    font-size: 18px;
+    color: #666;
+}
+.미리보기화면 {
+    width: 30%; /* 테이블을 부모 요소의 너비에 맞게 설정 */
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+#wrap {
+    display: inline-block;
+    margin: 20px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 280px;
+    height: 520px;
+}
+
+.in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 50px);
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    z-index: 2;
+    flex-direction: column;
+    background-image: url('/images/9726.png');
+    background-size: contain; /* 이미지의 원본 비율을 유지하면서 요소에 맞게 크기 조정 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 제거 */
+}
+.in hr {
+    border: 1px solid #CCCCCC; /* 테두리 추가 */
+    width: 90%
+}
+.top_text {
+    background-color: #dee2e2;
+    display: flex;
+    flex: 1;  
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin-top: 20px;
+      
+}
+.top_text p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+.top_text .red {
+    font-weight: bold;
+}
+
+.out {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #646363d0;
+    z-index: 1;
+}
+
+.more {
+    position: absolute;
+    bottom: 10px;
+    display: inline-block;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 50px;
+    background-color: #555;
+}
+.정보박스 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex: 2;
+    top: 100px;
+}
+.정보_img {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    flex: 1;     
+    border-radius: 50%; /* 부모 요소를 동그랗게 만듦 */
+    overflow: hidden; 
+}
+.정보_img img {
+    position: absolute; /* 부모 요소를 기준으로 이미지를 배치하기 위해 */
+    width: 80%; /* 이미지가 부모 요소를 넘어가지 않도록 */
+    max-height: 100%; /* 이미지가 부모 요소를 넘어가지 않도록 */
+    object-fit: cover; /* 이미지 비율 유지하면서 부모 크기에 맞춤 */
+    border-radius: 50%;
+ 
+}
+.정보_text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+.전화홈페이지 {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 50px;
+    margin-bottom: 50px;
+    
+}
+.전화하기,
+.마이홈 {
+    flex: 1; /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #212121;
+    height: 30%;
+    line-height: 70px;
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    z-index: 1;
+    display: flex; /* flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; 
+    
+    
+}
+.마이홈 {
+    margin-left: 20px; /* 전화하기와의 간격을 설정합니다. */
+}
+.전화_txt {
+    width: 28px;
+    height: 28px;
+    background: url(/images/bottom-fix-icon.png) no-repeat 0 0;
+    background-size: auto 28px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 2px 0;  
+}
+.홈페_txt {
+    width: 28px;
+    height: 28px;
+    background: url(/images/bottom-fix-icon.png) no-repeat 0 0;
+    background-size: auto 28px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 2px 0;
+    background-position: -28px 0;
+    
+}
+
+.bottom_left {
+    display: flex;
+    flex-direction: column;
+}
+.소속 {
+    font-weight: bold;
+}
+.이름 {
+    font-weight: bold;
+}
+.직책{
+    font-size: 14px;
+}
+.번호이메일{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.예시설명 {
+    position: relative;
+    top: -50px;
+    font-weight: bold;
+    color: #7d0cb1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    height: 150px;
+    text-align: center; /* 내용 가운데 정렬 */
+   
+}
+.modal-content p {
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+.close {
+  color: #111010;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: -20px;
+  left: 10px
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(158, 6, 6);
+  text-decoration: none;
+}
+
+/* 확인 버튼 스타일 */
+#confirmButton {
+  padding: 8px 20px;
+  background-color: #1952ee;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  left: 10px;
+}
+
+#confirmButton:hover {
+  background-color: #2d09f8;
+}

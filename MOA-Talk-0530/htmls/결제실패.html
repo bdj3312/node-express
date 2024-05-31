@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>모아톡 결제실패</title>
+  </head>
+
+  <body>
+    <section>
+      <h2> 결제가 실패했습니다. </h2>
+      <p id="code"></p>
+      <p id="message"></p>
+      <p>고객센터에 문의해주세요.  02-1004-1004</p>
+      
+    </section>
+  </body>
+</html>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const codeElement = document.getElementById("code");
+  const messageElement = document.getElementById("message");
+
+  codeElement.textContent = "주문 번호: " + urlParams.get("orderId");
+  messageElement.textContent = "실패 사유: " + urlParams.get("message");
+</script>

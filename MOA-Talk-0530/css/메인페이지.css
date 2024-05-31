@@ -1,0 +1,484 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, select, label, img, figure {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    /* min-width: 1280px; */
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+body {
+    font: normal 100% / 1.2 'Noto Sans KR Regular';
+    min-height: 100%;
+    letter-spacing: -0.03em;
+    display: block;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    color: #1b1b1b;
+    margin: 0;
+    padding: 0;
+}
+* {
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.main_box {
+    transition: transform 0.3s ease;
+}
+
+.content {
+    
+    padding-bottom: 22px;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodyhead {
+        padding-top: 30px;
+    }
+}
+.content .bodyhead {
+    padding: 45px 0 0 0;
+    
+}
+.content .bodyhead .titset {
+    position: relative;
+    
+}
+.content .bodyhead .titset .hd3 {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 0 5px 0;
+    
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: bold;
+}
+.content .bodyhead .tit.ty1 {
+    margin-left: 0;
+    
+}
+.content .bodyhead .titset .tit {
+    font-family: 'Noto Sans KR Bold';
+    font-size: 20px;
+    margin-left: 30px;
+}
+.content .bodyhead .tit.ty2 {
+    margin-left: 15px;
+    font-family: 'Noto Sans KR Regular';
+    font-weight: lighter;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 {
+        padding: 37px 0 0 0;
+    }
+}
+.content .bodycont.ty1 .flexgrid.ty2.send:first-child {
+    padding: 10px 0 0 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 {
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 0;
+    position: relative;
+    padding: 10px 112px;
+}
+.flexgrid {
+    display: flex;
+    align-items: center;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty1 {
+    margin: 0;
+    width: 550px;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.ty1 {
+    margin-right: 60px;
+    position: relative;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection {
+    margin: 0;
+    flex: 1;
+}
+.content .bodycont.ty1 .send_group .flexgrid.ty2.send .fsection.ty1 .inset {
+    padding: 30px 50px 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty1 .titset.ty1 {
+    width: inherit;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty1 .hd4 {
+    font-size: 24px;
+}
+.content .bodycont .flexgrid.ty2 .fsection .titset .hd4 {
+    font-size: 20px;
+    text-align: center;
+    margin-right: 200px;
+}
+.color_b {
+    color: #009fe2;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty1 .in_txt {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .in_txt {
+   width: 312px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .in_txt p {
+    font-size: 15px;  
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .in_txt p .bold{
+    font-weight: bold;
+    color: rgb(39, 20, 212);
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.ty1::after {
+    position: absolute;
+    /* top: 154px; */
+    top: 122px;
+    right: 75px;
+    content: "";
+    width: 159px;
+    height: 97px;
+    display: inline-block;
+    background: url(/images/send.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin: 0 5px 2px 0;
+}
+ /* 에프섹션티와이2 */
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty2.line_b {
+    border-bottom: 1px solid #d9d9d9;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty2 {
+    margin: 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.ty2 {
+    margin-left: 60px;
+    width: inherit;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection {
+    flex: 1;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .send_group .flexgrid.ty2.send .fsection.ty2 .inset {
+        padding-top: 17px;
+    }
+}
+.content .bodycont.ty1 .send_group .flexgrid.ty2.send .fsection.ty2 .inset {
+    padding: 30px 0 0 50px;
+    margin-right: 150px;
+}
+.content .bodycont .flexgrid.ty2 .fsection .titset .hd4 {
+    font-size: 20px;
+    text-align: center;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use {
+    margin-top: 20px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li {
+    display: inline-block;
+    margin-bottom: 40px;
+    position: relative;
+    float: left;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.ty1 {
+    background-position: 0 0;
+    width: 88px;
+    margin-left: 40px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico {
+    display: block;
+    height: 66px;
+    background: url(/images/use_icon01.png) no-repeat 0 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .num {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #0e497d;
+    color: #fff;
+    padding: 0 0 0 5px;
+    margin-top: 20px;
+    font-size: 14px;
+    left : 10px;
+    
+}
+.num {
+    counter-reset: numcount;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .bold {
+        font-size: 14px;
+        
+    }
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .bold {
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .s_txt, .content .bodycont.ty1 .flexgrid.ty2 .fsection.error .use .iconlist li .s_txt.sec, .content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li:first-child .s_txt {
+        font-size: 13px;
+        
+    }
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li:first-child .s_txt {
+    width: 165px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .s_txt {
+    display: inline-block;
+    margin-left: 22px;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li + li {
+        margin-left: 30px;
+        
+        
+    }
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.ty2 {
+    background-position: -89px 0;
+    width: 63px;
+    margin-left: 40px;
+
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico {
+    display: block;
+    height: 66px;
+    background: url(/images/use_icon01.png) no-repeat 0 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li:nth-child(2) .s_txt {
+    width: 100px;
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .s_txt {
+    display: inline-block;
+    margin-left: 35px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.ty3 {
+    background-position: -152px 0;
+    width: 65px;
+    margin-left: 50px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico {
+    display: block;
+    height: 66px;
+    background: url(/images/use_icon01.png) no-repeat 0 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li:nth-child(3) .s_txt {
+    width: 200px;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .flexgrid.ty2 .fsection.ty2.line_b .use .iconlist li img {
+        position: absolute;
+        right: 58px;
+        bottom: -2px;
+        width: 15%;
+    }
+}
+.use .iconlist li img {
+    margin: -3px 0 0 -5px;
+}
+
+
+.content .bodycont.ty1 .flexgrid.ty2.send:nth-child(2) {
+    padding: 0 0 0 0;
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 {
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 0;
+    position: relative;
+    padding: 10px 112px;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty2.line_r {
+    border-right: 1px solid #d9d9d9;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection.ty2 {
+    margin: 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.ty2 {
+    margin-left: 60px;
+    width: inherit;
+}
+.content .bodycont.ty1 .flexgrid.ty2.send .fsection {
+    margin: 0;
+    flex: 1;
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec.ty1 {
+    background-position: 0 0;
+    width: 79px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec {
+    display: block;
+    height: 72px;
+    background: url(/images/use_icon02.png) no-repeat 0 0;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec.ty1::after {
+    position: absolute;
+    top: 25px;
+    right: -16px;
+    content: "";
+    display: inline-block;
+    width: 43px;
+    height: 10px;
+    background: url(/images/add_arr1.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin: 0 10px 0 20px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li:first-child .s_txt.sec {
+    width: 130px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec.ty2 {
+    background-position: -79px 0;
+    width: 98px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec {
+    display: block;
+    height: 72px;
+    background: url(/images/use_icon02.png) no-repeat 0 0;
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec.ty2::after {
+    position: absolute;
+    top: 25px;
+    right: -36px;
+    content: "";
+    display: inline-block;
+    width: 43px;
+    height: 10px;
+    background: url(/images/add_arr1.png) no-repeat 0 0;
+    vertical-align: middle;
+    
+    left: 150px
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li:nth-child(2) .s_txt.sec {
+    width: 280px;
+}
+
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.ty2.line_r .use .iconlist li:last-child {
+    margin-left: -130px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec.ty3 {
+    background-position: -179px 0;
+    width: 73px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection .use .iconlist li .use_ico.sec {
+    display: block;
+    height: 72px;
+    background: url(/images/use_icon02.png) no-repeat 0 0;
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .flexgrid.ty2 .fsection.error .use .iconlist li:first-child {
+        width: 276px;
+    }
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.error .use .iconlist li:first-child {
+    width : 276px;
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.error .use .iconlist li .browser {
+    display: block;
+    height: 72px;
+    background: url(/images/browser.png) no-repeat 0 0;
+    
+    
+}
+@media screen and (max-width: 1536px) {
+    .content .bodycont.ty1 .flexgrid.ty2 .fsection.error .use .iconlist li + li {
+        margin-left: 60px;
+       
+    }
+}
+.content .bodycont.ty1 .flexgrid.ty2 .fsection.error .use .iconlist li .ver_check {
+    display: block;
+    height: 72px;
+    background: url(/images/ver_check.png) no-repeat 0 0;
+    
+    margin-left: 70px;
+    
+    
+}
+@media screen and (max-width: 1536px) {
+    .infoset.ty1 {
+        margin-top: 30px;
+    }
+}
+.infoset.ty1 {
+    /* margin: 120px 0 0 0; */
+    margin-top: 70px;
+    justify-content: center;
+}
+.infoset {
+    margin: 20px 0px 10px 0;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.content .bodycont.ty1 .infoset.ty1 .info_grid.ty1 {
+    /* margin-right: 190px; */
+    margin-right: 41px;
+}
+.infoset.ty1 .info_grid.ty1 .btn.down {
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    height: 63px;
+    line-height: 34px;
+    font-weight: bold;
+}
+.infoset .info_grid .btn.down.co1 {
+    background: #666;
+}
+.infoset .info_grid .btn.down.co1::after {
+    content: "";
+    display: inline-block;
+    width: 33px;
+    height: 35px;
+    background: url(/images/pdf.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin: 0 10px 0 20px;
+}
+.infoset .info_grid .btn.down + .btn.down {
+    margin-left: 30px;
+}
+.infoset.ty1 .info_grid.ty1 .btn.down {
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    height: 63px;
+    line-height: 34px;
+    font-weight: bold;
+}
+.infoset .info_grid .btn.down.co2 {
+    background: #cf423c;
+}
+.infoset .info_grid .btn.down.co2::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(/images/down.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin: 0 10px 0 20px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/결제성공.css">
+    <title>모아톡 결제완료</title>
+    <!-- 파이어베이스 --> 
+    
+      
+     
+  </head>
+  <body>
+    <section>
+      <h2 style="font-size: 30px;">결제 확인을 눌러주세요.</h2>
+      <p style="font-size: 18px;">상품명: 모아톡 한달 이용권</p>
+      <p id="orderId"></p>
+      <p id="amount"></p>
+      <p id="nickname"></p>
+      <p id="phoneNumber"></p>
+      <a class="button-link" onclick="결제확인버튼()">결제 확인</a>
+      <script>
+        function 결제확인버튼(){
+          alert("결제가 완료 되었습니다.")
+          window.location.href = "/htmls/친구등록.html"
+        }
+      </script>
+    </section>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getFirestore, collection, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAGc4pEbp18wb99ZqOZZ6BlUh4DBWvzVFE",
+        authDomain: "moa-talk.firebaseapp.com",
+        projectId: "moa-talk",
+        storageBucket: "moa-talk.appspot.com",
+        messagingSenderId: "466834615241",
+        appId: "1:466834615241:web:41f86dedd43b951dfe5618"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const firestore = getFirestore(app);
+      var Nickname = sessionStorage.getItem('Nickname');
+      var Email = sessionStorage.getItem('Email');
+      var PhoneNumber = sessionStorage.getItem('PhoneNumber');
+      var urlParams = new URLSearchParams(window.location.search);
+      var paymentKey = urlParams.get("paymentKey");
+      var orderId = urlParams.get("orderId");
+      var amount = urlParams.get("amount");
+     
+      async function saveUserInfoToFirestore(Nickname, Email, PhoneNumber, orderId, amount) {
+        const userDocRef = doc(firestore, "회원정보", `${Nickname}`);
+        const userDocSnapshot = await getDoc(userDocRef);
+
+        if (userDocSnapshot.exists()) {
+            alert("이미 등록된 구매정보입니다.");
+            window.location.href = `/htmls/결제실패.html?message=이미 등록된 구매정보입니다.&orderId=${orderId}`;
+        } else {
+            try {
+                // 파이어스토어에 회원 정보 추가
+                await setDoc(userDocRef, {
+                    이름 : Nickname,
+                    이메일: Email,
+                    주문ID: orderId,
+                    구매금액: amount,
+                    연락처: PhoneNumber,
+                });
+                console.log("구매정보가 성공적으로 저장되었습니다.");
+                
+                // window.location.href = "첫화면.html"
+                
+            } catch (error) {
+                console.error("구매 정보 저장 중 오류 발생:", error);
+            }
+        }
+      }  
+      saveUserInfoToFirestore(Nickname, Email, PhoneNumber, orderId, amount);  
+    
+    
+      
+
+        async function confirm() {
+          const requestData = {
+            paymentKey: paymentKey,
+            orderId: orderId,
+            amount: amount,
+          };
+
+          const response = await fetch("http://localhost:4242/confirm", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestData),
+          });
+
+          const json = await response.json();
+
+          if (!response.ok) {
+            // 결제 실패 비즈니스 로직을 구현하세요.
+            console.log(json);
+            window.location.href = `/htmls/결제실패.html?message=${json.message}&code=${json.code}`;
+          }
+
+          // 결제 성공 비즈니스 로직을 구현하세요.
+          console.log(json);
+          
+        }
+        
+        confirm();
+
+        
+        const orderIdElement = document.getElementById("orderId");
+        const amountElement = document.getElementById("amount");
+        const nicknameElement = document.getElementById("nickname");
+        const phoneNumberElement = document.getElementById("phoneNumber");
+
+        orderIdElement.textContent = "주문번호: " + orderId;
+        amountElement.textContent = "결제 금액: " + amount;
+        
+        nicknameElement.textContent = "주문자명: " + Nickname;
+        phoneNumberElement.textContent = "연락처: " + PhoneNumber;
+    </script>
+  </body>
+</html>

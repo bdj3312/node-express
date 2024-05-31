@@ -1,0 +1,69 @@
+.메시지작성셋 {
+    width: 70%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}   
+.메시지작성셋 .자료화면{
+    display: flex;
+    flex: 1;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.메시지작성셋 .메시지작성화면{
+    display: flex;
+    flex: 1;
+    border: 1px solid #666;
+    border-radius: 5px;
+    width: 80%;
+    flex-direction: column;
+
+}
+.메시지작성셋 .메시지작성화면 .내용작성 {
+    width: 400px;
+    display: flex;
+}
+.작성하는곳 { 
+    resize: none;  /* 크기 조정 비활성화 */
+    width: 100%;
+    height: 250px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(255, 240, 222);
+    padding: 10px;
+}
+.미리보기울타리 {
+    height: 80%;
+    overflow: auto; /* 내용이 부모 요소를 넘을 경우 스크롤 생성 */
+    margin-top: 10px;
+}
+.메시지미리보기 {
+    position: relative;
+    background-color: rgb(253, 253, 248);
+    width: 200px;
+    padding: 10px;
+    white-space: pre-wrap; /* 줄바꿈 및 공백을 그대로 표시 */
+    word-wrap: break-word; /* 단어가 길 경우 줄바꿈 */
+    font-size: 12px;
+    border-radius: 5px;
+    
+    
+}
+.bottomset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11px;
+    height: 50px;
+    width: 90%;
+    
+}
+.bottom_left {
+    display: flex;
+    flex-direction: column;
+}

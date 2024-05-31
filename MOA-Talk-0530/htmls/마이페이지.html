@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모아톡</title>
+    <link rel="stylesheet" href="/css/친구등록.css">
+    <link rel="stylesheet" href="/css/박스모음.css">
+    <link rel="stylesheet" href="/css/메인페이지.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500&display=swap">
+    
+ 
+   
+<body>
+    <div id="container" class="min">
+        
+        
+        
+
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            
+            <ul>
+                <li class="side_img"></li>
+                <li><a href="/htmls/메인페이지.html">
+                    <span class="ico main"></span>
+                    <span class="txt">메인</span>
+                </a>                            
+                </li>
+                <hr>
+                <li><a href="/htmls/마이페이지.html">마이페이지</a></li>
+                <hr>
+                <li><a href="/htmls/친구등록.html">메시지발송</a> </li>
+                <hr>    
+                <li><a href="">통합자료실</a></li>
+                <hr>
+                <li><a href="">모바일명함</a></li>
+                <hr>
+            </ul>
+        </div>
+        <header>
+            <div class="channel-info">
+                <a href="" target="_blank" class="btn">
+                    <span class="ch">채널추가</span>
+                </a>
+                <div class="channel-tip">
+                    
+                    <div class="cht_inner">
+                        <div class="grid">
+                            <div class="cht_h">
+                                <span class="hd">모아톡 <span class="bold">채널추가 +</span></span>
+                            </div>
+                            <div class="cht_cont">
+                                <div class="box ty1">
+                                    <p class="boxhd bold">① 노하우</p>
+                                    <p class="stxt">고객관리사례,<br>
+                                        계약, 판매법 교육</p>
+                                    <img src="/images/ch_pop_01.png" alt="">
+
+                                </div>
+                                <div class="box ty2">
+                                    <p class="boxhd bold">② 콘텐츠</p>
+                                    <p class="stxt">고객발송자료<br>
+                                        매주 월요일 공지</p>
+                                    <img src="/images/ch_pop_02.png" alt="">
+                                </div>
+                                <div class="box ty3">
+                                    <p class="boxhd bold">② 시스템</p>
+                                    <p class="stxt">새 기능, 오류 수정<br>
+                                        업데이트 안내</p>
+                                    <img src="/images/ch_pop_03.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search">
+                                <p class="stxt">카카오톡에서 ‘<span class="bold">모아톡</span>’를 검색하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="navbar">
+            <a href="/htmls/결제페이지.html">정기결제</a>        
+            <a href="">사용설명서</a>
+            <a href="">고객센터</a>     
+            <a href="">다운로드</a>
+            <a href="/htmls/로그인.html">로그인</a>
+        </div>
+        <div class="m_info_all">
+            <div class="info_title">
+                <h3 class="hd3">
+                    <span class="my_info">마이페이지</span>
+                </h3>
+            </div>
+            <div class="tabs">
+                <button class="tablink active" onclick="openTab('tab1')">내 정보 변경</button>
+                <button class="tablink" onclick="openTab('tab2')">구독 결제 내역</button>
+            </div>
+            <div id="tab1" class="tabcontent active">
+                <div class="info_box">
+                    <div class="mid-box">
+                        <table>
+                            <tr>
+                                <th>연락처</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  readonly="readonly" class="fo_none" style="width: 250px; background: rgb(242, 242, 242);">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="password" disabled="disabled" style="width: 250px; background: rgb(242, 242, 242);">
+                                    </span>
+                                    <p class="pw_txt stxt">영어, 숫자, 특수기호 포함 8자 이상</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호 확인</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="password" disabled="disabled" style="width: 250px; background: rgb(242, 242, 242);">
+                                    </span>
+                                    <p class="pw_txt stxt">영어, 숫자, 특수기호 포함 8자 이상</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이름</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  style="width: 250px;">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>직책</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  style="width: 250px;">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>업종</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  style="width: 250px;">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소속</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  style="width: 250px;">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  style="width: 250px;">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>홈페이지</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input type="text"  style="width: 250px;">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사진</th>
+                                <td>
+                                    <span class="inputset">
+                                        <input value=" 사진첨부" disabled="disabled" class="upload_img" style="width: 250px;">
+                                        <label for="my_file" class="upload_button">업로드</label>         
+                                        <input type="file" accept="image/*" id="my_file" class="upload_file" style="display: none;" onchange="previewImage(event)">
+                                    </span>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="미리보기화면">
+                            <div class="폰모양">
+                                <div class="list">
+                                    
+                                    <div class="in">
+                                        <div class="top_text">
+                                            <p>회원정보를 입력하시면
+                                                <br>
+                                                고객발송용 자료하단에
+                                                <br>
+                                                <span class="co red">개인 프로필</span>이 등록됩니다.
+                                            </p>
+                                        </div>
+                                        <hr>
+                                        <div class="정보박스"> 
+                                            <div class="정보_img">
+                                                <img id="preview" src="/images/my_img.png">
+                                            </div>
+                                            <div class="정보_text">
+                                                <h2 class="소속">소속</h2>
+                                                <p class="이름직책">
+                                                    <span class="이름">백동진</span>
+                                                    <span class="직책">직책</span>
+                                                </p>
+                                                <ui class="번호이메일">
+                                                    <li>01076571234</li>
+                                                    <li>tset@naver.com</li>
+                                                </ui>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="전화홈페이지">
+                                            <a href="javascript:void(0)" class="전화하기">
+                                                <span class="전화_txt"></span>전화하기
+                                            </a>
+                                            <a href="javascript:void(0)" class="마이홈">
+                                                <span class="홈페_txt"></span>홈페이지
+                                            </a>
+                                        </div>
+                                        <div class="예시설명">
+                                            <span class="예시_txt">
+                                                (개인프로필 미리보기 화면 입니다.)
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="out">
+                                        <p class="more"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomset">
+                        <div class="bottom_left">
+                            <span class="left_1">정보동의넣기1</span>
+                            <span class="left_2">정보동의넣기2</span>
+                        </div>
+                        <div class="bottom_right">
+                            <a id="bottom_sv" class="bottom_save">저장</a>
+                            <a class="bottom_rmv">회원탈퇴</a>
+
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="tab2" class="tabcontent">
+                <div class="pay_check">
+                    <div class="pay_check_box">
+                        <p class="pay_txt">결제 내역 확인</p>
+                        <div class="pay_info">
+                            <p>월 정기구독 이용권</p>
+                            <ul>
+                                <li><span class="nm">구독기간</span>
+                                    <span class="date">-</span>
+                                </li> 
+                                <li><span class="nm">다음 결제일</span>
+                                    <span class="date">-</span>
+                                </li> 
+                                <li><span class="nm">미결제</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pay_m">
+                        <ul>
+                            <li><span class="nm">상품금액</span>
+                                <span class="price">0원</span>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    
+
+    
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>저장 되었습니다.</p>
+            <button id="confirmButton">확인</button>
+        </div>
+    </div>
+    <script>
+        // 모달 열기
+        document.getElementById('bottom_sv').onclick = function() {
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        // 모달 닫기
+        document.getElementsByClassName('close')[0].onclick = function() {
+            document.getElementById('myModal').style.display = "none";
+        }
+        document.getElementById('confirmButton').onclick = function() {
+            document.getElementById('myModal').style.display = "none";
+        }
+        window.onload = function() {
+            // 로컬 스토리지에서 이미지 데이터 가져오기
+            var uploadedImage = localStorage.getItem('uploadedImage');
+
+            // 가져온 이미지가 있을 경우, 미리보기 화면에 이미지 표시
+            if (uploadedImage) {
+                var preview = document.getElementById('preview');
+                preview.src = uploadedImage;
+            }
+        };
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var preview = document.getElementById('preview');
+                preview.src = reader.result;
+                
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+        document.querySelector('.bottom_save').addEventListener('click', function() {
+            // 로컬 스토리지에서 이미지 데이터 가져오기
+            
+            var preview = document.getElementById('preview');
+            var imageSrc = preview.src;
+            if (imageSrc) {
+                localStorage.setItem('uploadedImage', imageSrc);
+                console.log('이미지를 저장합니다.');
+                
+            } else {
+                console.log('저장할 이미지가 없습니다.');
+            }
+        });
+        document.getElementById('my_file').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.querySelector('.upload_img').value = fileName;
+        });
+        document.querySelector('.전화하기').addEventListener('click', function() {
+            // 전화하기 클릭 시 실행할 코드
+            alert('전화하기 버튼 클릭됨');
+        });
+        document.querySelector('.마이홈').addEventListener('click', function() {
+            // 홈페이지 클릭 시 실행할 코드
+            alert('홈페이지 버튼 클릭됨');
+        });
+        
+
+        
+        
+    </script>
+    <script>    
+        // 탭 열기 함수
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+    
+    
+</body>
+</html>
